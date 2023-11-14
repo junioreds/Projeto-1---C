@@ -31,7 +31,16 @@ int cadastrarTarefas(ListaDeTarefas *lt){
 }
 
 int listarTarefas(ListaDeTarefas lt){
-    printf("Ola\n");
+    if (lt.qtd == 0){
+        printf("Nenhuma tarefa cadastrada\n");
+    };
+
+    for(int i = 0; i < lt.qtd; i++){
+        printf("Tarefa %d\n", i + 1);
+        printf("Prioridade da tarefa: %d\n", lt.tarefas[i].prioridade);
+        printf("Descricao da tarefa:\n %s", lt.tarefas[i].descricao);
+        printf("Categoria da tarefa: %s\n", lt.tarefas[i].categoria);
+    }
 }
 
 int deletarTarefas(){

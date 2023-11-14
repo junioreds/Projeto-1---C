@@ -13,7 +13,7 @@ int main(){
         if (opcao == 0){
             break;
         } else if (opcao == 1) { 
-           cadastrarTarefas();
+           cadastrarTarefas(&lt);
         } else if (opcao == 2) {
             listarTarefas();
         } else if (opcao == 3) {

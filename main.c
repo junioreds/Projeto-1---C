@@ -15,7 +15,7 @@ int main(){
         } else if (opcao == 1) { 
            cadastrarTarefas(&lt);
         } else if (opcao == 2) {
-            listarTarefas();
+            listarTarefas(lt);
         } else if (opcao == 3) {
             deletarTarefas();
         } else if (opcao == 4) {

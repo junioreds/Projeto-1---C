@@ -11,6 +11,6 @@ typedef struct {
 
 int Menu();
 int cadastrarTarefas(ListaDeTarefas *lt);
-int listarTarefas();
+int listarTarefas(ListaDeTarefas lt);
 int deletarTarefas();
 int salvarTarefas();

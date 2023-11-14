@@ -17,7 +17,7 @@ int main(){
         } else if (opcao == 2) {
             listarTarefas(lt);
         } else if (opcao == 3) {
-            deletarTarefas();
+            deletarTarefas(&lt);
         } else if (opcao == 4) {
             salvarTarefas();
         } else {

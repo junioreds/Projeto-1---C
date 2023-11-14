@@ -16,8 +16,18 @@ int Menu(){
     printf("Qual opcao deseja: ");
 }
 
-int cadastrarTarefas(){
-    printf("Ola\n");
+int cadastrarTarefas(ListaDeTarefas *lt){
+    printf("Defina a prioridade da tarefa (0 a 10): \n");
+    scanf("%d", &lt->tarefas[lt->qtd].prioridade);
+    limpaBuffer();
+    printf("Defina a descricao da tarefa: \n");
+    fgets(lt->tarefas[lt->qtd].descricao, 300, stdin);
+    lt->tarefas[lt->qtd].descricao[strcspn(lt->tarefas[lt->qtd].descricao, "\n")] == '\0';
+    printf("Defina a categoria da tarefa: \n");
+    fgets(lt->tarefas[lt->qtd].categoria, 100, stdin);
+    lt->tarefas[lt->qtd].categoria[strcspn(lt->tarefas[lt->qtd].categoria, "\n")] == '\0';
+    lt->qtd++;
+    printf("\n");
 }
 
 int listarTarefas(ListaDeTarefas lt){
